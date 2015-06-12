@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{5A2C1F67-7C9C-4C5B-8A15-C035A22E1182}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>GBD.Audio.SoxSharp</RootNamespace>
+    <AssemblyName>GBD.Audio.SoxSharp</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>GBD.Audio.SoxSharp.xml</DocumentationFile>
+    <NoWarn>
+    </NoWarn>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>GBD.Audio.SoxSharp.xml</DocumentationFile>
+    <NoWarn>
+    </NoWarn>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>On</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Helper\StdConvert.vb" />
+    <Compile Include="DataTypes\EncodingInfo.vb" />
+    <Compile Include="DataTypes\EncodingsInfo.vb" />
+    <Compile Include="DataTypes\GlobalInfo.vb" />
+    <Compile Include="DataTypes\ID3TagGroup.vb" />
+    <Compile Include="DataTypes\InstrumentInfo.vb" />
+    <Compile Include="DataTypes\LoopingInfo.vb" />
+    <Compile Include="DataTypes\OutOfBound.vb" />
+    <Compile Include="DataTypes\SignalInfo.vb" />
+    <Compile Include="DataTypes\SoxException.vb" />
+    <Compile Include="DataTypes\VersionInfo.vb" />
+    <Compile Include="Effect\EffectBase.vb" />
+    <Compile Include="Effect\EffectChain.vb" />
+    <Compile Include="Effect\EffectGlobals.vb" />
+    <Compile Include="Effect\EffectHandler.vb" />
+    <Compile Include="Effect\Mixing\EffectRemix.vb" />
+    <Compile Include="Effect\Tone\EffectAllPass.vb" />
+    <Compile Include="Effect\Mixing\EffectChannels.vb" />
+    <Compile Include="Effect\Tone\EffectLowPass.vb" />
+    <Compile Include="Effect\Volume\EffectCompand.vb" />
+    <Compile Include="Effect\Tone\EffectHighPass.vb" />
+    <Compile Include="Effect\Mixing\EffectMixer.vb" />
+    <Compile Include="Effect\Misc\EffectNativeFileIn.vb" />
+    <Compile Include="Effect\Misc\EffectNativeFileOut.vb" />
+    <Compile Include="Effect\Mastering\EffectRate.vb" />
+    <Compile Include="Effect\Misc\EffectSpeexDSP.vb" />
+    <Compile Include="Helper\FileConvert.vb" />
+    <Compile Include="UnmanagedHelper\CArray.vb" />
+    <Compile Include="UnmanagedHelper\CHelper.vb" />
+    <Compile Include="UnmanagedHelper\CStruct.vb" />
+    <Compile Include="UnmanagedHelper\DllLoader.vb" />
+    <Compile Include="IO\FormatBase.vb" />
+    <Compile Include="IO\FormatFile.vb" />
+    <Compile Include="IO\FormatHandler.vb" />
+    <Compile Include="IO\Mp3LameOpts.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Swig\libsox.vb" />
+    <Compile Include="Swig\libsoxPINVOKE.vb" />
+    <Compile Include="Swig\lsx_enum_item.vb" />
+    <Compile Include="Swig\lsx_getopt_flags_t.vb" />
+    <Compile Include="Swig\lsx_getopt_t.vb" />
+    <Compile Include="Swig\lsx_io_type.vb" />
+    <Compile Include="Swig\lsx_option_arg_t.vb" />
+    <Compile Include="Swig\lsx_option_t.vb" />
+    <Compile Include="Swig\sox_bool.vb" />
+    <Compile Include="Swig\sox_effects_chain_t.vb" />
+    <Compile Include="Swig\sox_effects_globals_t.vb" />
+    <Compile Include="Swig\sox_effect_handler_t.vb" />
+    <Compile Include="Swig\sox_effect_t.vb" />
+    <Compile Include="Swig\sox_encodinginfo_t.vb" />
+    <Compile Include="Swig\sox_encodings_flags_t.vb" />
+    <Compile Include="Swig\sox_encodings_info_t.vb" />
+    <Compile Include="Swig\sox_encoding_t.vb" />
+    <Compile Include="Swig\sox_error_t.vb" />
+    <Compile Include="Swig\sox_fileinfo_t.vb" />
+    <Compile Include="Swig\sox_format_handler_t.vb" />
+    <Compile Include="Swig\sox_format_t.vb" />
+    <Compile Include="Swig\sox_format_tab_t.vb" />
+    <Compile Include="Swig\sox_globals_t.vb" />
+    <Compile Include="Swig\sox_instrinfo_t.vb" />
+    <Compile Include="Swig\sox_loopinfo_t.vb" />
+    <Compile Include="Swig\sox_loop_flags_t.vb" />
+    <Compile Include="Swig\sox_oob_t.vb" />
+    <Compile Include="Swig\sox_option_t.vb" />
+    <Compile Include="Swig\sox_plot_t.vb" />
+    <Compile Include="Swig\sox_signalinfo_t.vb" />
+    <Compile Include="Swig\sox_version_flags_t.vb" />
+    <Compile Include="Swig\sox_version_info_t.vb" />
+    <Compile Include="Swig\SWIGTYPE_p_double.vb" />
+    <Compile Include="Swig\SWIGTYPE_p_f_enum_sox_bool_p_void__int.vb" />
+    <Compile Include="Swig\SWIGTYPE_p_f_p_q_const__char__sox_bool.vb" />
+    <Compile Include="Swig\SWIGTYPE_p_f_p_struct_sox_effect_t_int_a___p_char__int.vb" />
+    <Compile Include="Swig\SWIGTYPE_p_f_p_struct_sox_effect_t_p_int_p_size_t__int.vb" />
+    <Compile Include="Swig\SWIGTYPE_p_f_p_struct_sox_effect_t_p_q_const__int_p_int_p_size_t_p_size_t__int.vb" />
+    <Compile Include="Swig\SWIGTYPE_p_f_p_struct_sox_effect_t__int.vb" />
+    <Compile Include="Swig\SWIGTYPE_p_f_p_struct_sox_format_t_p_int_size_t__size_t.vb" />
+    <Compile Include="Swig\SWIGTYPE_p_f_p_struct_sox_format_t_p_q_const__int_size_t__size_t.vb" />
+    <Compile Include="Swig\SWIGTYPE_p_f_p_struct_sox_format_t_unsigned_long__int.vb" />
+    <Compile Include="Swig\SWIGTYPE_p_f_p_struct_sox_format_t__int.vb" />
+    <Compile Include="Swig\SWIGTYPE_p_f_p_void_p_q_const__char__int.vb" />
+    <Compile Include="Swig\SWIGTYPE_p_f_unsigned_int_p_q_const__char_p_q_const__char_va_list__void.vb" />
+    <Compile Include="Swig\SWIGTYPE_p_f_void__p_sox_format_handler_t.vb" />
+    <Compile Include="Swig\SWIGTYPE_p_int.vb" />
+    <Compile Include="Swig\SWIGTYPE_p_p_char.vb" />
+    <Compile Include="Swig\SWIGTYPE_p_p_f_void__p_sox_effect_handler_t.vb" />
+    <Compile Include="Swig\SWIGTYPE_p_p_int.vb" />
+    <Compile Include="Swig\SWIGTYPE_p_p_p_char.vb" />
+    <Compile Include="Swig\SWIGTYPE_p_p_sox_effect_t.vb" />
+    <Compile Include="Swig\SWIGTYPE_p_size_t.vb" />
+    <Compile Include="Swig\SWIGTYPE_p_sox_effect_handler_t.vb" />
+    <Compile Include="Swig\SWIGTYPE_p_sox_effect_t.vb" />
+    <Compile Include="Swig\SWIGTYPE_p_sox_format_handler_t.vb" />
+    <Compile Include="Swig\SWIGTYPE_p_sox_format_t.vb" />
+    <Compile Include="Swig\SWIGTYPE_p_unsigned_int.vb" />
+    <Compile Include="Swig\SWIGTYPE_p_void.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\Binaries\sox-14.4.1-x64\LibMad.dll">
+      <Link>sox-14.4.1-x64\LibMad.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\Binaries\sox-14.4.1-x64\LibMp3Lame.dll">
+      <Link>sox-14.4.1-x64\LibMp3Lame.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\Binaries\sox-14.4.1-x64\LibSndFile-1.dll">
+      <Link>sox-14.4.1-x64\LibSndFile-1.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\Binaries\sox-14.4.1-x64\LibSoX.dll">
+      <Link>sox-14.4.1-x64\LibSoX.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\Binaries\sox-14.4.1-x32\LibMad.dll">
+      <Link>sox-14.4.1-x32\LibMad.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Content Include="..\..\Binaries\sox-14.4.1-x32\LibMp3Lame.dll">
+      <Link>sox-14.4.1-x32\LibMp3Lame.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Binaries\sox-14.4.1-x32\LibSndFile-1.dll">
+      <Link>sox-14.4.1-x32\LibSndFile-1.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Binaries\sox-14.4.1-x32\LibSoX.dll">
+      <Link>sox-14.4.1-x32\LibSoX.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
